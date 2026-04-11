@@ -8,7 +8,10 @@
 
 body {
     display: flex;
-    background-image: rgb(0.0.0.5);
+    background-image: url("img/barn.jpg");
+    background-size: cover;
+   
+
 }
 p{
     margin: 10px;
@@ -22,7 +25,10 @@ p{
     height: 100vh;
     width: 40vw;
     gap: 10px;
-    background: #0b0b0f; /* fundo escuro */
+    background: #0b0b0fda; /* fundo escuro */
+    box-shadow: 60px 0 30px 40px #0b0b0fda;
+    
+    
 
 }
 
@@ -68,6 +74,10 @@ input:focus {
 
     background: #1e1e1e;
 }
+input:active{
+    background-color:red;
+}
+
 
 
 
@@ -96,14 +106,15 @@ input:focus {
     margin: 10px;
     
 }
-button{
-    background-color: #ffb168,
+.button {
+    background-color:
         0 0 10px #ff84ff,
         0 0 20px rgba(255, 135, 255, 0.6); ;
+    border: solid 1px #ff84ff;
 }
 .imagem {
     width: 60%;
-    background-image: url('img/barn-middle-snow-covered-land.jpg'); /* coloca sua imagem aqui */
+    background-image: url('img/barn-middle-snow-covered-land.jpg');
     background-size: cover;
     background-position: center;
 }
