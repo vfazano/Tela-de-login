@@ -13,6 +13,8 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    background-image: rgba(0, 0, 0, 0.877)
+    ;
 }
 
 body {
@@ -25,6 +27,7 @@ p{
     margin: 10px;
 }
 
+
 .bloco {
     display: flex;
     justify-content: center;
@@ -33,10 +36,19 @@ p{
     height: 100vh;
     width: 40vw;
     gap: 10px;
-    background: #0b0b0fda; /* fundo escuro */
-    box-shadow: 60px 0 30px 40px #0b0b0fda;
+    background: #0b0b0f; /* fundo escuro */
+    box-shadow: 60px 0 30px 100vw #ffffff37;
     
     
+
+}
+.imglogo{
+    position: absolute;
+    top: 5vh ;
+    left:10vw;
+
+    height: 10vh;
+    width: 10vw;
 
 }
 
@@ -73,17 +85,17 @@ input {
 }
 
 input:focus {
-    border: 2px solid #ff7b00c4;
+    border: 2px solid #F7F7F7;
 
     box-shadow:
         0 0 5px #ffb168,
         0 0 10px #ff84ff,
         0 0 20px rgba(255, 135, 255, 0.6);
 
-    background: #1e1e1e;
+    background: #000000;
 }
 input:active{
-    background-color:red;
+    background-color:#DD7FA1;
 }
 
 
@@ -106,13 +118,32 @@ input:active{
     justify-content: center;
     align-items: center;
     margin: 50px;
+     text-decoration: none;
+    color:#8F53C7;
+    transition: transform 0.3s ease-in-out; /* Suaviza a transição */
  
+}
+.nlogin:hover  a{
+    transform: scale(1.04); /* Aumenta 10% (1.0 = original, 1.1 = 110%) */
+
+}
+.esqueci{
+    font-size: 16px; /* Tamanho original */
+    transition: transform 0.3s ease-in-out; /* Suaviza a transição */
+    display: inline-block; /* Necessário para aplicar transform a textos */
 }
 .esqueci a{
     display: flex;
     justify-content: end;
     margin: 10px;
+    text-decoration: none;
+    color:#8F53C7;
+   
     
+}
+.esqueci:hover {
+    transform: scale(1.04); /* Aumenta 10% (1.0 = original, 1.1 = 110%) */
+
 }
 .button {
     background-color:
@@ -125,6 +156,59 @@ input:active{
     background-image: url('img/barn-middle-snow-covered-land.jpg');
     background-size: cover;
     background-position: center;
+}
+.mockup {
+    position: relative; /* referência pros elementos */
+    width: 500px;
+    height: 500px;
+}
+
+/* CELULAR (ATRÁS) */
+.celular {
+    position: absolute;
+    width: 450px;
+    left:15vw;
+    top: 25vh;
+    transform: rotate(-15deg);
+
+    z-index: 1;
+
+    filter: drop-shadow(0 20px 40px #7F0ACE);
+    transition: 0.4s ease;
+}
+
+/* CARTÃO (NA FRENTE) */
+.cartao {
+    position: absolute;
+    width: 300px;
+    left: 30vw;
+    top: 180px;
+    transform: rotate(10deg);
+
+    z-index: 2;
+
+    filter: drop-shadow(0 10px 20px #7F0ACE);
+    transition: 0.4s ease;
+}
+.mockup:hover .celular {
+    transform: rotate(-10deg) translateY(-10px) scale(1.03);
+}
+
+.mockup:hover .cartao {
+    transform: rotate(5deg) translateY(-15px) scale(1.05);
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.celular {
+    animation: float 4s ease-in-out infinite;
+}
+
+.cartao {
+    animation: float 3s ease-in-out infinite;
 }
 
 
