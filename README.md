@@ -86,7 +86,7 @@ form.addEventListener("submit", (e) => {
 1. Baixe ou clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repo.git
+https://github.com/vfazano/Tela-de-login.git
 ```
 
 2. Abra o arquivo:
